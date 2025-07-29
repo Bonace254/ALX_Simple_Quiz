@@ -1,5 +1,8 @@
 function checkAnswer() {
+    // Retrieve the correct answer from the HTML (input with id="choice1")
     const correctAnswer = document.getElementById("choice1").value;
+
+    // Get the user's selected radio button
     const selectedOption = document.querySelector('input[name="quiz"]:checked');
     const feedback = document.getElementById("feedback");
 
@@ -20,5 +23,6 @@ function checkAnswer() {
     }
 }
 
+// Add event listener after DOM loads
 document.getElementById("submit-answer").addEventListener("click", checkAnswer);
 
