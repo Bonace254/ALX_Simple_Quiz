@@ -1,10 +1,11 @@
-
+function checkAnswer() {
+    const correctAnswer = document.getElementById("choice1").value;
     const selectedOption = document.querySelector('input[name="quiz"]:checked');
-
     const feedback = document.getElementById("feedback");
 
     if (!selectedOption) {
         feedback.textContent = "Please select an answer before submitting.";
+        feedback.style.color = "orange";
         return;
     }
 
